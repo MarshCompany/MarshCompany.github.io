@@ -1,0 +1,205 @@
+/* Fonts */
+@font-face {
+     font-display: swap;
+     font-family: 'Gilroy_semibold';
+     src: url('../fonts/Gilroy-SemiBold.eot');
+     src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),
+          url('../fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/Gilroy-SemiBold.woff') format('woff'),
+          url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
+     font-weight: 600;
+     font-style: normal;
+}
+
+@font-face {
+     font-display: swap;
+     font-family: 'Gilroy_regular';
+     src: url('../fonts/Gilroy-Regular.eot');
+     src: local('Gilroy Regular'), local('Gilroy-Regular'), url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Regular.woff') format('woff'), url('../fonts/Gilroy-Regular.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-display: swap;
+     font-family: 'Gilroy_medium';
+     src: url('../fonts/Gilroy-Medium.eot');
+     src: local('Gilroy Medium'), local('Gilroy-Medium'), url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Medium.woff') format('woff'), url('../fonts/Gilroy-Medium.ttf') format('truetype');
+     font-weight: 500;
+     font-style: normal;
+}
+
+@font-face {
+     font-display: swap;
+     font-family: 'Gilroy_bold';
+     src: url('../fonts/Gilroy-Bold.eot');
+     src: local('Gilroy Bold'), local('Gilroy-Bold'), url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Bold.woff') format('woff'), url('../fonts/Gilroy-Bold.ttf') format('truetype');
+     font-weight: bold;
+     font-style: normal;
+}
+
+/* /Fonts */
+.wrapper {
+     height: 100vh;
+     background-color: #93d2bc;
+     display: flex;
+}
+
+.content__group {
+     background-color: #ffffff;
+     width: 30%;
+     padding-top: 50px;
+     padding-bottom: 10px;
+}
+
+.content__tittle {
+     text-align: center;
+     padding-bottom: 20px;
+     margin-bottom: 20px;
+     border-bottom: 1px solid #93d2bc;
+     font-family: 'Gilroy_bold';
+     font-size: 35px;
+}
+
+.content__group-block {
+     display: flex;
+     justify-content: space-around;
+     margin-bottom: 30px;
+     font-family: 'Gilroy_medium';
+     font-size: 24px;
+}
+
+.content__group-block-num {
+     text-align: center;
+     padding: 10px 20px;
+     border: 1px solid #164639;
+     border-radius: 5px;
+     cursor: pointer;
+     color: #164639;
+}
+
+.content__group-block-num.active {
+     transition: .4s;
+     background-color: #267d1f;
+     border: 1px solid #267d1f;
+     color: #ffffff;
+}
+
+.content__group-table {
+     display: none;
+     flex-direction: column;
+     align-items: center;
+}
+
+.content__group-table.active {
+     display: flex;
+}
+
+.group-table__block {
+     display: flex;
+     width: 50%;
+     padding-top: 20px;
+     border-top: 1px solid #93d2bc;
+     margin-top: 5px;
+     font-size: 22px;
+}
+
+.group-table__block:first-child {
+     margin-top: 0;
+     border: none;
+}
+
+.group-table__num {
+     font-family: 'Gilroy_bold';
+     margin-right: 10px;
+}
+
+.group-table__name {
+     font-family: 'Gilroy_medium';
+}
+
+.content__group-back {
+     width: 100%;
+     height: 100%;
+     margin-top: 15px;
+     background-color: #93d2bc;
+}
+
+/* CONTENT TIME*/
+
+.content__time {
+     width: 70%;
+     padding-top: 50px;
+     padding-bottom: 10px;
+}
+
+.time__box {
+     position: relative;
+     padding: 0 20px;
+}
+
+.time__wrapper {
+     position: absolute;
+     width: calc(100% - 40px);
+     display: none;
+     justify-content: space-between;
+}
+.time__wrapper.active {
+     display: flex;
+}
+
+.time_conteiner {
+     width: 20%;
+     border-radius: 5px;
+     padding: 20px 10px;
+     background-color: #ffffff;
+}
+
+.time_conteiner-date {
+     text-align: center;
+     text-transform: uppercase;
+     font-family: 'Gilroy_bold';
+     font-size: 20px;
+     padding-bottom: 10px;
+     border-bottom: 1px solid #93d2bc;
+}
+.time_conteiner-time, .time_conteiner-mission, .time_conteiner-about {
+     text-align: center;
+     font-family: 'Gilroy_medium';
+     margin-top: 10px;
+}
+
+.time_conteiner-about {
+     text-align: left;
+}
+.time_conteiner-about.bold {
+     margin-top: 20px;
+     font-family: 'Gilroy_bold';
+}
+
+@media screen and (max-width: 800px) {
+     .wrapper {
+          height: 100%;
+          background-color: #93d2bc;
+          display: block;
+     }
+     .content__group {
+          width: 100%;
+          padding-bottom: 20px;
+     }
+     .group-table__block {
+          width: 80%;
+     }
+     .content__time {
+          width: 100%;
+     }
+     .time__wrapper.active {
+          width: 100%;
+          position: relative;
+          display: block;
+     }
+     .time_conteiner {
+          width: 100%;
+          margin-bottom: 20px;
+     }
+}
